@@ -43,7 +43,7 @@ const Services = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Section Header */}
-        <div className="flex items-center gap-3 mb-16">
+        <div className="flex items-center gap-3 mb-6">
           <div className="w-8 h-[1px] bg-black/60" />
           <span className="text-xs font-medium text-muted-foreground uppercase tracking-widest">
             {t('services.tag')}
@@ -59,7 +59,7 @@ const Services = () => {
       <div className="max-w-7xl  mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-16 lg:gap-24 items-start pb-24">
 
         {/* Right Column: Imagery */}
-        <div className={`lg:col-span-6 relative lg:mt-[80px] ${i18n.language === 'ar' ? 'order-1 lg:order-2' : ''}`}>
+        <div className={`lg:col-span-6  relative lg:mt-[80px] ${i18n.language === 'ar' ? 'order-1 lg:order-2' : ''}`}>
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -82,7 +82,7 @@ const Services = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className={`absolute -bottom-[170px] ${i18n.language === 'ar' ? '-left-4 sm:-left-12' : '-right-4 sm:-right-12'} p-2`}
+            className={`absolute  -bottom-[36%]  md:-bottom-[20%] lg:-bottom-[39%] ${i18n.language === 'ar' ? '-left-4 sm:-left-12' : '-right-4 sm:-right-12'} p-2`}
           >
             <div className="">
               <img
@@ -99,7 +99,7 @@ const Services = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className={`lg:col-span-6 flex flex-col ${i18n.language === 'ar' ? 'order-2 lg:order-1' : ''}`}
+          className={`lg:col-span-6 mt-[80px] lg:mt-0 flex flex-col ${i18n.language === 'ar' ? 'order-2 lg:order-1' : ''}`}
         >
           {servicesData.map((service, index) => (
             <motion.div

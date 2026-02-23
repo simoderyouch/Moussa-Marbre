@@ -16,7 +16,7 @@ const Home = () => {
       <Services />
       <ProductsCarousel />
       <Projects />
-      <Testimonials />
+
       <CTASection />
     </>
   );
