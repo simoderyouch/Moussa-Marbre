@@ -1,0 +1,19 @@
+{
+    "buildCommand": "prisma generate && vite build",
+    "outputDirectory": "dist",
+    "framework": "vite",
+    "rewrites": [
+        {
+            "source": "/api/products/:path*",
+            "destination": "/api/products"
+        },
+        {
+            "source": "/api/projects",
+            "destination": "/api/projects"
+        },
+        {
+            "source": "/api/chat",
+            "destination": "/api/chat"
+        }
+    ]
+}
