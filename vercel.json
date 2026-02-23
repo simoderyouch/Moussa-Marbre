@@ -2,6 +2,11 @@
     "buildCommand": "prisma generate && vite build",
     "outputDirectory": "dist",
     "framework": "vite",
+    "functions": {
+        "api/**/*.ts": {
+            "includeFiles": "prisma/dev.db"
+        }
+    },
     "rewrites": [
         {
             "source": "/api/products/:path*",
