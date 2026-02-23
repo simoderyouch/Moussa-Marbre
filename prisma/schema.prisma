@@ -4,7 +4,6 @@ generator client {
 
 datasource db {
   provider = "sqlite"
-  url      = "file:./dev.db"
 }
 
 model Category {
@@ -29,4 +28,24 @@ model Product {
   inStock    Boolean  @default(true)
   createdAt  DateTime @default(now())
   updatedAt  DateTime @updatedAt
+}
+
+model ProjectCategory {
+  id       Int       @id @default(autoincrement())
+  name     String    @unique
+  projects Project[]
+}
+
+model Project {
+  id          Int     @id @default(autoincrement())
+  title       String
+  description String
+  image       String // Unsplash URL
+  published   Boolean @default(true)
+
+  categoryId Int?
+  category   ProjectCategory? @relation(fields: [categoryId], references: [id])
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }

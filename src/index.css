@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+/* Fonts are preloaded in index.html for faster rendering */
 
 @tailwind base;
 @tailwind components;
@@ -17,8 +17,8 @@
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 10%;
 
-    /* Deep Emerald */
-    --primary: 166 60% 15%;
+    /* Black */
+    --primary: 0 0% 9%;
     --primary-foreground: 0 0% 100%;
 
     /* Muted settings */
@@ -38,17 +38,17 @@
     /* Borders / Dividers */
     --border: 0 0% 90%;
     --input: 0 0% 90%;
-    --ring: 166 60% 15%;
+    --ring: 0 0% 9%;
     --radius: 0.125rem;
 
     --sidebar-background: 60 14% 96%;
     --sidebar-foreground: 0 0% 10%;
-    --sidebar-primary: 166 60% 15%;
+    --sidebar-primary: 0 0% 9%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 30 29% 65%;
     --sidebar-accent-foreground: 0 0% 100%;
     --sidebar-border: 0 0% 90%;
-    --sidebar-ring: 166 60% 15%;
+    --sidebar-ring: 0 0% 9%;
   }
 
   .dark {
@@ -58,7 +58,7 @@
     --card-foreground: 60 14% 96%;
     --popover: 0 0% 12%;
     --popover-foreground: 60 14% 96%;
-    --primary: 166 60% 30%;
+    --primary: 60 14% 96%;
     --primary-foreground: 0 0% 100%;
     --secondary: 0 0% 15%;
     --secondary-foreground: 60 14% 96%;
@@ -70,16 +70,16 @@
     --destructive-foreground: 60 14% 96%;
     --border: 0 0% 15%;
     --input: 0 0% 15%;
-    --ring: 166 60% 30%;
+    --ring: 60 14% 96%;
 
     --sidebar-background: 0 0% 7%;
     --sidebar-foreground: 60 14% 96%;
-    --sidebar-primary: 166 60% 30%;
+    --sidebar-primary: 60 14% 96%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 30 29% 45%;
     --sidebar-accent-foreground: 0 0% 100%;
     --sidebar-border: 0 0% 15%;
-    --sidebar-ring: 166 60% 30%;
+    --sidebar-ring: 60 14% 96%;
   }
 }
 
@@ -110,5 +110,18 @@
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
   }
 }

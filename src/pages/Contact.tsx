@@ -11,33 +11,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-
-const contactInfo = [
-  {
-    icon: Phone,
-    label: 'Téléphone',
-    value: '+212 661-829455',
-  },
-  {
-    icon: Mail,
-    label: 'Email',
-    value: 'contact@moussamarbre.ma',
-    secondary: 'devis@moussamarbre.ma',
-  },
-  {
-    icon: MapPin,
-    label: 'Adresse',
-    value: 'Ouled Slama',
-    secondary: 'Temara 12000, Maroc',
-  },
-  {
-    icon: Clock,
-    label: 'Horaires',
-    value: 'Lun - Ven : 8h - 18h',
-    secondary: 'Sam : 8h - 13h',
-  },
-];
-
+import { useTranslation } from 'react-i18next';
 const services = [
   'Marbre',
   'Granit',
@@ -49,14 +23,37 @@ const services = [
   'Autre',
 ];
 
-const whyChooseUs = [
-  'Devis gratuit sous 24h',
-  '30+ types de pierres naturelles',
-  'Livraison partout au Maroc',
-  'Garantie sur tous nos travaux',
-];
-
 const ContactPage = () => {
+  const { t, i18n } = useTranslation();
+
+  const contactInfo = [
+    {
+      icon: Phone,
+      label: t('contactPage.infoText.phone'),
+      value: '+212 661-829455',
+    },
+    {
+      icon: Mail,
+      label: t('contactPage.infoText.email'),
+      value: 'contact@moussamarbre.ma',
+      secondary: 'devis@moussamarbre.ma',
+    },
+    {
+      icon: MapPin,
+      label: t('contactPage.infoText.address'),
+      value: t('contactPage.loc1'),
+      secondary: t('contactPage.loc2'),
+    },
+    {
+      icon: Clock,
+      label: t('contactPage.infoText.hours'),
+      value: t('contactPage.hours1'),
+      secondary: t('contactPage.hours2'),
+    },
+  ];
+
+  const whyChooseUs = t('contactPage.whyItems', { returnObjects: true }) as string[];
+
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
@@ -85,22 +82,21 @@ const ContactPage = () => {
   };
 
   return (
-    <>
+    <div dir={i18n.language === 'ar' ? 'rtl' : 'ltr'}>
       {/* Header Section */}
-      <section className="pt-32 pb-24 bg-background">
+      <section className="pt-[12rem]  pb-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-8 h-px bg-border" />
+            <div className="w-8 h-px bg-black" />
             <span className="text-xs font-medium text-muted-foreground uppercase tracking-widest">
-              Contact
+              {t('contactPage.tag')}
             </span>
           </div>
-          <h1 className="font-serif text-5xl sm:text-6xl text-foreground leading-[1.1] tracking-tight mb-8">
-            Parlons de votre <span className="italic text-muted-foreground">projet</span>
+          <h1 className="font-sans text-5xl sm:text-6xl text-foreground leading-[1.1] tracking-tight mb-8">
+            {t('contactPage.title1')}<span className="italic font-serif text-muted-foreground">{t('contactPage.title2')}</span>
           </h1>
           <p className="text-muted-foreground text-lg max-w-2xl leading-relaxed">
-            Que vous ayez une idée précise ou que vous cherchiez des conseils, notre équipe
-            est à votre écoute. Remplissez le formulaire ou contactez-nous directement.
+            {t('contactPage.desc')}
           </p>
         </div>
       </section>
@@ -134,10 +130,10 @@ const ContactPage = () => {
             {/* Form */}
             <div className="lg:col-span-2">
               <h2 className="font-serif text-3xl text-foreground mb-4">
-                Demander un Devis Gratuit
+                {t('contactPage.formTitle')}
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-10">
-                Remplissez le formulaire ci-dessous et nous vous répondrons dans les 24 heures.
+                {t('contactPage.formDesc')}
               </p>
 
               {isSubmitted ? (
@@ -146,10 +142,10 @@ const ContactPage = () => {
                     <Check className="w-8 h-8 text-green-600" />
                   </div>
                   <h3 className=" text-xl text-green-800 mb-2">
-                    Message envoyé avec succès!
+                    {t('contactPage.successTitle')}
                   </h3>
                   <p className="text-green-600">
-                    Nous vous contacterons dans les plus brefs délais.
+                    {t('contactPage.successDesc')}
                   </p>
                 </div>
               ) : (
@@ -157,11 +153,11 @@ const ContactPage = () => {
                   <div className="grid sm:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <Label htmlFor="name" className="text-sm font-medium text-gray-700 uppercase">
-                        Nom Complet
+                        {t('contactPage.labels.name')}
                       </Label>
                       <Input
                         id="name"
-                        placeholder="Votre nom"
+                        placeholder={t('contactPage.labels.namePlaceholder')}
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         required
@@ -170,16 +166,18 @@ const ContactPage = () => {
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="email" className="text-sm font-medium text-gray-700 uppercase">
-                        Email
+                        {t('contactPage.labels.email')}
                       </Label>
                       <Input
                         id="email"
                         type="email"
-                        placeholder="votre@email.com"
+                        placeholder={t('contactPage.labels.emailPlaceholder')}
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         required
                         className="bg-background rounded-none border-border/50 focus-visible:ring-primary"
+                        dir="ltr"
+                        style={i18n.language === 'ar' ? { textAlign: 'right' } : {}}
                       />
                     </div>
                   </div>
@@ -187,24 +185,26 @@ const ContactPage = () => {
                   <div className="grid sm:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <Label htmlFor="phone" className="text-sm font-medium text-gray-700 uppercase">
-                        Téléphone
+                        {t('contactPage.labels.phone')}
                       </Label>
                       <Input
                         id="phone"
                         type="tel"
-                        placeholder="+212 6 00 00 00 00"
+                        placeholder={t('contactPage.labels.phonePlaceholder')}
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         className="bg-background rounded-none border-border/50 focus-visible:ring-primary"
+                        dir="ltr"
+                        style={i18n.language === 'ar' ? { textAlign: 'right' } : {}}
                       />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="city" className="text-sm font-medium text-gray-700 uppercase">
-                        Ville
+                        {t('contactPage.labels.city')}
                       </Label>
                       <Input
                         id="city"
-                        placeholder="Votre ville"
+                        placeholder={t('contactPage.labels.cityPlaceholder')}
                         value={formData.city}
                         onChange={(e) => setFormData({ ...formData, city: e.target.value })}
                         className="bg-background rounded-none border-border/50 focus-visible:ring-primary"
@@ -214,14 +214,15 @@ const ContactPage = () => {
 
                   <div className="space-y-2">
                     <Label htmlFor="service" className="text-sm font-medium text-gray-700 uppercase">
-                      Service Souhaité
+                      {t('contactPage.labels.service')}
                     </Label>
                     <Select
                       value={formData.service}
                       onValueChange={(value) => setFormData({ ...formData, service: value })}
+                      dir={i18n.language === 'ar' ? 'rtl' : 'ltr'}
                     >
                       <SelectTrigger className="bg-white">
-                        <SelectValue placeholder="Sélectionnez un service" />
+                        <SelectValue placeholder={t('contactPage.labels.servicePlaceholder')} />
                       </SelectTrigger>
                       <SelectContent>
                         {services.map((service) => (
@@ -235,11 +236,11 @@ const ContactPage = () => {
 
                   <div className="space-y-2">
                     <Label htmlFor="message" className="text-sm font-medium text-gray-700 uppercase">
-                      Message
+                      {t('contactPage.labels.message')}
                     </Label>
                     <Textarea
                       id="message"
-                      placeholder="Décrivez votre projet, les matériaux souhaités, les dimensions approximatives..."
+                      placeholder={t('contactPage.labels.messagePlaceholder')}
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       rows={5}
@@ -251,8 +252,8 @@ const ContactPage = () => {
                     type="submit"
                     className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-none px-8 py-6 text-xs uppercase tracking-widest w-full sm:w-auto"
                   >
-                    Envoyer le Message
-                    <Send className="w-4 h-4 ml-2" />
+                    {t('contactPage.btn')}
+                    <Send className={`w-4 h-4 ${i18n.language === 'ar' ? 'mr-2 rotate-180' : 'ml-2'}`} />
                   </Button>
                 </form>
               )}
@@ -264,15 +265,14 @@ const ContactPage = () => {
               <div className="bg-background border border-border/50 rounded-none h-64 flex items-center justify-center">
                 <div className="text-center">
                   <MapPin className="w-10 h-10 text-muted-foreground mx-auto mb-4" />
-                  <p className="text-foreground font-medium">Ouled Slama, Temara 12000</p>
-                  <p className="text-muted-foreground text-sm mt-1">Maroc</p>
+                  <p className="text-foreground font-medium">{t('contactPage.loc1')}, {t('contactPage.loc2')}</p>
                   <a
                     href="https://maps.google.com"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-primary text-sm hover:underline mt-4 inline-block font-medium"
                   >
-                    Voir sur Google Maps
+                    {t('contactPage.mapText')}
                   </a>
                 </div>
               </div>
@@ -280,12 +280,12 @@ const ContactPage = () => {
               {/* Why Choose Us */}
               <div className="bg-background p-8 rounded-none border border-border/50">
                 <h3 className="font-serif text-2xl text-foreground mb-6">
-                  Pourquoi Nous Choisir ?
+                  {t('contactPage.sidebarTitle')}
                 </h3>
                 <ul className="space-y-4">
                   {whyChooseUs.map((item, index) => (
                     <li key={index} className="flex items-start gap-4">
-                      <div className="w-1 h-1 bg-primary rounded-full mt-2.5 flex-shrink-0" />
+                      <div className={`w-1 h-1 bg-primary rounded-full mt-2.5 flex-shrink-0 ${i18n.language === 'ar' ? 'ml-0 mr-1' : ''}`} />
                       <span className="text-muted-foreground text-sm leading-relaxed">{item}</span>
                     </li>
                   ))}
@@ -295,7 +295,7 @@ const ContactPage = () => {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 
