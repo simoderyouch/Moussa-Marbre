@@ -55,7 +55,7 @@ const Navbar = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled || !isHomePage
-        ? 'bg-foreground/95 backdrop-blur-md border-b border-border/20'
+        ? 'bg-foreground/95  border-b border-border/20'
         : 'bg-transparent'
         }`}
     >
@@ -141,8 +141,8 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden bg-foreground border-t border-border/20">
-            <nav className="flex flex-col py-4">
+          <div className="lg:hidden w-full bg-foreground border-t border-border/20">
+            <nav className="flex flex-col w-full py-4">
               {navLinks.map((link) => (
                 <Link
                   key={link.path}
