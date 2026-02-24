@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useTranslation } from 'react-i18next';
+import SEO from '../components/SEO';
 
 export interface Project {
   id: number;
@@ -54,6 +55,12 @@ const ProjectsPage = () => {
 
   return (
     <div dir={i18n.language === 'ar' ? 'rtl' : 'ltr'}>
+      <SEO
+        title={`${t('projectsPage.title1')} ${t('projectsPage.title2')} | Moussa Marbre`}
+        description="Découvrez nos projets inspirants en marbre et pierre naturelle répartis dans tout le Maroc. Plus de 80 réalisations haut de gamme : plans de travail, escaliers, façades et plus."
+        keywords="projets marbre maroc, réalisations pierre naturelle, installation granit, Moussa Marbre projets"
+        url="https://moussamarbre.com/#/projets"
+      />
       {/* Header Section */}
       <section className="pt-[12rem] pb-24 bg-background">
         <div className="max-w-7xl text-center mx-auto px-4 sm:px-6 lg:px-8">

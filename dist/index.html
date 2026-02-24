@@ -1,13 +1,133 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Moussa Marbre</title>
-    <script type="module" crossorigin src="./assets/index-D5Rq330m.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-BsY9entL.css">
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<html lang="fr" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Preconnect to external resources for speed -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Preload critical fonts for speed -->
+  <link rel="preload"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+    as="style" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" />
+
+  <!-- Preload critical images for speed (LCP) -->
+  <link rel="preload" href="./service-4.jpg" as="image" fetchpriority="high" />
+
+  <!-- Primary SEO Meta Tags -->
+  <title>Moussa Marbre | Marbre, Granit & Pierre Naturelle au Maroc</title>
+  <meta name="description"
+    content="Moussa Marbre est votre spécialiste du marbre, granit et pierre naturelle à Taza et partout au Maroc. 30+ variétés, 80+ projets livrés. Devis gratuit sous 24h." />
+  <meta name="keywords"
+    content="marbre, granit, pierre naturelle, Moussa Marbre, Taza, Maroc, revêtement mural, plan de travail cuisine, habillage escalier, aménagement extérieur, pierre de Taza, marbre noir, marbre blanc, travertin, façade marbre" />
+  <meta name="author" content="Moussa Marbre" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://moussamarbre.com/" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://moussamarbre.com/" />
+  <meta property="og:title" content="Moussa Marbre | Marbre, Granit & Pierre Naturelle au Maroc" />
+  <meta property="og:description"
+    content="Spécialiste du marbre, granit et pierre naturelle. Transformons vos espaces en œuvres d'art intemporelles. 30+ variétés exclusives, devis gratuit." />
+  <meta property="og:image" content="https://moussamarbre.com/logo.png" />
+  <meta property="og:locale" content="fr_MA" />
+  <meta property="og:locale:alternate" content="ar_MA" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:site_name" content="Moussa Marbre" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://moussamarbre.com/" />
+  <meta name="twitter:title" content="Moussa Marbre | Marbre, Granit & Pierre Naturelle" />
+  <meta name="twitter:description"
+    content="Spécialiste du marbre, granit et pierre naturelle au Maroc. Devis gratuit sous 24h." />
+  <meta name="twitter:image" content="https://moussamarbre.com/logo.png" />
+
+  <!-- Geo Tags for Local SEO -->
+  <meta name="geo.region" content="MA-RBA" />
+  <meta name="geo.placename" content="Temara, Morocco" />
+  <meta name="geo.position" content="33.9273;-6.9063" />
+  <meta name="ICBM" content="33.9273, -6.9063" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="./logo.png" />
+  <link rel="apple-touch-icon" href="./logo.png" />
+
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#1A1A1A" />
+  <meta name="msapplication-TileColor" content="#1A1A1A" />
+
+  <!-- JSON-LD Structured Data for Local Business -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Moussa Marbre",
+      "image": "https://moussamarbre.com/logo.png",
+      "description": "Spécialiste du marbre, granit et pierre naturelle au Maroc. Transformation, découpe et installation de pierre naturelle.",
+      "@id": "https://moussamarbre.com",
+      "url": "https://moussamarbre.com",
+      "telephone": "+212661829455",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Ouled Slama",
+        "addressLocality": "Temara",
+        "postalCode": "12000",
+        "addressCountry": "MA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 33.9273,
+        "longitude": -6.9063
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens": "08:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "08:00",
+          "closes": "13:00"
+        }
+      ],
+      "sameAs": [],
+      "priceRange": "$$",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Morocco"
+      },
+      "serviceType": ["Marble Installation", "Granite Worktops", "Natural Stone Cladding", "Staircase Cladding", "Outdoor Landscaping"]
+    }
+    </script>
+  <script type="module" crossorigin src="./assets/index-DrV42QqX.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/vendor-react-DPXIlxAS.js">
+  <link rel="modulepreload" crossorigin href="./assets/vendor-motion-BOFb5L5T.js">
+  <link rel="modulepreload" crossorigin href="./assets/vendor-i18n-ClLKQ7LB.js">
+  <link rel="modulepreload" crossorigin href="./assets/vendor-ui-B534AxuN.js">
+  <link rel="stylesheet" crossorigin href="./assets/index-DRsLgT80.css">
+</head>
+
+<body>
+  <!-- Noscript fallback for SEO crawlers -->
+  <noscript>
+    <h1>Moussa Marbre - Marbre, Granit & Pierre Naturelle au Maroc</h1>
+    <p>Spécialiste du marbre, granit et pierre naturelle. 30+ variétés exclusives, 80+ projets livrés. Contactez-nous au
+      +212 661-829455.</p>
+  </noscript>
+  <div id="root"></div>
+</body>
+
 </html>

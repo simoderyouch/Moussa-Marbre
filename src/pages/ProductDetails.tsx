@@ -6,6 +6,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { useTranslation } from 'react-i18next';
+import SEO from '../components/SEO';
 import type { Product } from './Products';
 
 const ProductDetails = () => {
@@ -85,6 +86,34 @@ const ProductDetails = () => {
 
     return (
         <div dir={i18n.language === 'ar' ? 'rtl' : 'ltr'} className="bg-background min-h-screen pt-[12rem] pb-24">
+            <SEO
+                title={`${product.name} | Catalogue Moussa Marbre`}
+                description={`Découvrez le ${product.name} par Moussa Marbre. Idéal pour vos revêtements de sol, murs, escaliers ou façades. Qualité premium au Maroc.`}
+                keywords={`${product.name} prix, acheter ${product.name} maroc, ${product.name} taza, pierre naturelle`}
+                url={`https://moussamarbre.com/#/produits/${name}`}
+                image={product.images || undefined}
+                structuredData={{
+                    "@context": "https://schema.org/",
+                    "@type": "Product",
+                    "name": product.name,
+                    "image": product.images ? [product.images] : [],
+                    "description": `Matériau en ${product.category?.name || 'pierre'} naturel.`,
+                    "brand": {
+                        "@type": "Brand",
+                        "name": "Moussa Marbre"
+                    },
+                    ...(product.regularPrice ? {
+                        "offers": {
+                            "@type": "Offer",
+                            "url": `https://moussamarbre.com/#/produits/${name}`,
+                            "priceCurrency": "MAD",
+                            "price": product.regularPrice,
+                            "itemCondition": "https://schema.org/NewCondition",
+                            "availability": "https://schema.org/InStock"
+                        }
+                    } : {})
+                }}
+            />
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
                 <Link to="/produits" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-8 group uppercase tracking-widest">

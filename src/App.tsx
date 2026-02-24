@@ -6,8 +6,9 @@ import WhatsAppFloater from './components/WhatsAppFloater';
 import ChatWidget from './components/ChatWidget';
 import ScrollToTop from './components/ScrollToTop';
 
+import Home from './pages/Home';
+
 // Lazy-load pages for code splitting & faster initial load
-const Home = lazy(() => import('./pages/Home'));
 const Projects = lazy(() => import('./pages/Projects'));
 const Products = lazy(() => import('./pages/Products'));
 const ProductDetails = lazy(() => import('./pages/ProductDetails'));

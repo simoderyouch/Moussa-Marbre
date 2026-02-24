@@ -1,0 +1,83 @@
+Name,Regular price,Images,Categories,Type,Published,Visibility in catalog,In stock?
+Blatic brown,900.0,./Granit/images/Blatic_brown.jpg,Granit,simple,1,visible,1
+Blanc perle,600.0,./Granit/images/Blanc_perle.jpg,Granit,simple,1,visible,1
+Cachemire withe,,./Granit/images/Cachemire_withe.jpg,Granit,simple,1,visible,1
+Gran perla,600.0,./Granit/images/Gran_perla.jpg,Granit,simple,1,visible,1
+Gris mondariz,,./Granit/images/Gris_mondariz.jpg,Granit,simple,1,visible,1
+Labrador gris,1300.0,./Granit/images/Labrador_gris.png,Granit,simple,1,visible,1
+Labrador noir,1200.0,./Granit/images/Labrador_noir.jpg,Granit,simple,1,visible,1
+Matrix noir,,./Granit/images/Matrix_noir.jpg,Granit,simple,1,visible,1
+Multicouleur,,./Granit/images/Multicouleur.jpg,Granit,simple,1,visible,1
+New halayeb,,./Granit/images/New_halayeb.jpg,Granit,simple,1,visible,1
+Noir absolu,,./Granit/images/Noir_absolu.jpg,Granit,simple,1,visible,1
+Noir absolu flammé,,./Granit/images/Noir_absolu_flammé.jpg,Granit,simple,1,visible,1
+Noir galaxy,,./Granit/images/Noir_galaxy.jpg,Granit,simple,1,visible,1
+Rose avel,,./Granit/images/Rose_avel.jpg,Granit,simple,1,visible,1
+Rose porino,,./Granit/images/Rose_porino.jpg,Granit,simple,1,visible,1
+Rouge balmoral,,./Granit/images/Rouge_balmoral.jpg,Granit,simple,1,visible,1
+Vert tropical,,./Granit/images/Vert_tropical.jpg,Granit,simple,1,visible,1
+Arabiscato,1200.0,./Marbre importé/images/Arabiscato.jpg,Marbre importé,simple,1,visible,1
+Arabiscato negro,2500.0,./Marbre importé/images/Arabiscato_negro.jpg,Marbre importé,simple,1,visible,1
+Arabiscato rosso,2500.0,./Marbre importé/images/Arabiscato_rosso.jpg,Marbre importé,simple,1,visible,1
+Botitchino,,./Marbre importé/images/Botitchino.jpg,Marbre importé,simple,1,visible,1
+Blanc ibiza,,./Marbre importé/images/Blanc_ibiza.jpg,Marbre importé,simple,1,visible,1
+Blanc Portugal,1200.0,./Marbre importé/images/Blanc_Portugal.jpg,Marbre importé,simple,1,visible,1
+Blanc polaris,1300.0,./Marbre importé/images/Blanc_polaris.jpg,Marbre importé,simple,1,visible,1
+Blanc sivec,1300.0,./Marbre importé/images/Blanc_sivec.jpg,Marbre importé,simple,1,visible,1
+Bardilio,1800.0,./Marbre importé/images/Bardilio.jpg,Marbre importé,simple,1,visible,1
+Blanc mochté,1800.0,./Marbre importé/images/Blanc_mochté.jpg,Marbre importé,simple,1,visible,1
+Blanc tassos,1800.0,./Marbre importé/images/Blanc_tassos.jpg,Marbre importé,simple,1,visible,1
+Blanc volakas,1800.0,./Marbre importé/images/Blanc_volakas.jpg,Marbre importé,simple,1,visible,1
+Blanc statuario,3500.0,./Marbre importé/images/Blanc_statuario.png,Marbre importé,simple,1,visible,1
+Bleu Roma,5000.0,./Marbre importé/images/Bleu_Roma.png,Marbre importé,simple,1,visible,1
+Bleu macaubas,6500.0,./Marbre importé/images/Bleu_macaubas.jpg,Marbre importé,simple,1,visible,1
+Bleu bahia,8000.0,./Marbre importé/images/Bleu_bahia.jpg,Marbre importé,simple,1,visible,1
+Crema galala,500.0,./Marbre importé/images/Crema_galala.jpg,Marbre importé,simple,1,visible,1
+Crema marfil,600.0,./Marbre importé/images/Crema_marfil.jpg,Marbre importé,simple,1,visible,1
+Crema royal,1500.0,./Marbre importé/images/Crema_royal.jpg,Marbre importé,simple,1,visible,1
+Crema moca,700.0,./Marbre importé/images/Crema_moca.jpg,Marbre importé,simple,1,visible,1
+Calacatta,1800.0,./Marbre importé/images/Calacatta.jpg,Marbre importé,simple,1,visible,1
+Crema sofita,2800.0,./Marbre importé/images/Crema_sofita.jpg,Marbre importé,simple,1,visible,1
+Dark river,2800.0,./Marbre importé/images/Dark_river.jpg,Marbre importé,simple,1,visible,1
+Fossil marron,800.0,./Marbre importé/images/Fossil_marron.jpg,Marbre importé,simple,1,visible,1
+Fossil noir,800.0,./Marbre importé/images/Fossil_noir.jpg,Marbre importé,simple,1,visible,1
+Marron light,800.0,./Marbre importé/images/Marron_light.jpg,Marbre importé,simple,1,visible,1
+Marron imperial,,./Marbre importé/images/Marron_imperial.jpg,Marbre importé,simple,1,visible,1
+Beige taza polli,180.0,./Marbre local/images/Beige_taza_polli.jpg,Marbre local,simple,1,visible,1
+Beige taza bouchardé,180.0,./Marbre local/images/Beige_taza_bouchardé.jpg,Marbre local,simple,1,visible,1
+Beige taza vieille,180.0,./Marbre local/images/Beige_taza_vieille.jpg,Marbre local,simple,1,visible,1
+Beige taza brut,160.0,./Marbre local/images/Beige_taza_brut.jpg,Marbre local,simple,1,visible,1
+Beige taza veinage,180.0,./Marbre local/images/Beige_taza_veinage.jpg,Marbre local,simple,1,visible,1
+Beige taza strié,200.0,./Marbre local/images/Beige_taza_strié.jpg,Marbre local,simple,1,visible,1
+Gris taza polli,240.0,./Marbre local/images/Gris_taza_polli.jpg,Marbre local,simple,1,visible,1
+Gris taza bouchardé,240.0,./Marbre local/images/Gris_taza_bouchardé.jpg,Marbre local,simple,1,visible,1
+Gris taza vieille,240.0,./Marbre local/images/Gris_taza_vieille.jpg,Marbre local,simple,1,visible,1
+Gris taza brut,210.0,./Marbre local/images/Gris_taza_brut.jpg,Marbre local,simple,1,visible,1
+Gris taza veinage,240.0,./Marbre local/images/Gris_taza_veinage.jpg,Marbre local,simple,1,visible,1
+Gris taza strié,280.0,./Marbre local/images/Gris_taza_strié.jpg,Marbre local,simple,1,visible,1
+Gris taza sablé,240.0,./Marbre local/images/Gris_taza_sablé.jpg,Marbre local,simple,1,visible,1
+Beige taza sablé,180.0,./Marbre local/images/Beige_taza_sablé.png,Marbre local,simple,1,visible,1
+Zola vieille,200.0,./Marbre local/images/Zola_vieille.jpg,Marbre local,simple,1,visible,1
+Pierre volcanique,280.0,./Marbre local/images/Pierre_volcanique.jpg,Marbre local,simple,1,visible,1
+Volubilis,400.0,./Marbre local/images/Volubilis.jpg,Marbre local,simple,1,visible,1
+Noir khenifra,400.0,./Marbre local/images/Noir_khenifra.jpg,Marbre local,simple,1,visible,1
+Gris khenifra,350.0,./Marbre local/images/Gris_khenifra.jpg,Marbre local,simple,1,visible,1
+Gris tiflet,320.0,./Marbre local/images/Gris_tiflet.jpg,Marbre local,simple,1,visible,1
+Gris benslimane,300.0,./Marbre local/images/Gris_benslimane.jpg,Marbre local,simple,1,visible,1
+Noir azilal,400.0,./Marbre local/images/Noir_azilal.jpg,Marbre local,simple,1,visible,1
+Jaune bejaad,320.0,./Marbre local/images/Jaune_bejaad.jpg,Marbre local,simple,1,visible,1
+Rouge agadir,380.0,./Marbre local/images/Rouge_agadir.jpg,Marbre local,simple,1,visible,1
+Bir jdid,350.0,./Marbre local/images/Bir_jdid.jpg,Marbre local,simple,1,visible,1
+Pierre Naturelle,300.0,./Pierre Naturelle&Tahejart/images/Pierre_Naturelle.jpg,Pierre NaturelleTahejart,simple,1,visible,1
+Eclaté beige taza,120.0,./Pierre Naturelle&Tahejart/images/Eclaté_beige_taza.jpg,Pierre NaturelleTahejart,simple,1,visible,1
+Éclaté gris taza,130.0,./Pierre Naturelle&Tahejart/images/Éclaté_gris_taza.jpg,Pierre NaturelleTahejart,simple,1,visible,1
+Éclaté Noir khenifra,180.0,./Pierre Naturelle&Tahejart/images/Éclaté_Noir_khenifra.jpg,Pierre NaturelleTahejart,simple,1,visible,1
+Éclaté noir azilal,180.0,./Pierre Naturelle&Tahejart/images/Éclaté_noir_azilal.jpg,Pierre NaturelleTahejart,simple,1,visible,1
+Éclaté volubilis,180.0,./Pierre Naturelle&Tahejart/images/Éclaté_volubilis.jpg,Pierre NaturelleTahejart,simple,1,visible,1
+Éclaté rouge rosé,220.0,./Pierre Naturelle&Tahejart/images/Éclaté_rouge_rosé.jpg,Pierre NaturelleTahejart,simple,1,visible,1
+Ardoise gris benikhirane,,./Pierre Naturelle&Tahejart/images/Ardoise_gris_benikhirane.jpg,Pierre NaturelleTahejart,simple,1,visible,1
+Ardoise verdatre,130.0,./Pierre Naturelle&Tahejart/images/Ardoise_verdatre.jpg,Pierre NaturelleTahejart,simple,1,visible,1
+Ardoise violet foncé,160.0,./Pierre Naturelle&Tahejart/images/Ardoise_violet_foncé.jpg,Pierre NaturelleTahejart,simple,1,visible,1
+Ardoise,130.0,./Pierre Naturelle&Tahejart/images/Ardoise.jpg,Pierre NaturelleTahejart,simple,1,visible,1
+Ardoise,120.0,./Pierre Naturelle&Tahejart/images/Ardoise2.jpg,Pierre NaturelleTahejart,simple,1,visible,1
+Ardoise,140.0,./Pierre Naturelle&Tahejart/images/Ardoise3.jpg,Pierre NaturelleTahejart,simple,1,visible,1

@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import type { Variants } from 'framer-motion';
 import { useTranslation, Trans } from 'react-i18next';
+import SEO from '../components/SEO';
 
 // --- DATA ---
 const values = [
@@ -360,6 +361,12 @@ const AboutPage = () => {
 
   return (
     <main className="overflow-hidden bg-background" dir={i18n.language === 'ar' ? 'rtl' : 'ltr'}>
+      <SEO
+        title={`${t('aboutPage.heroTitle1')} ${t('aboutPage.heroTitle2')} | Moussa Marbre`}
+        description="Découvrez l'histoire de Moussa Marbre, fondé en 1989. Spécialiste de la Pierre de Taza, du marbre et du granit avec plus de 80 projets majeurs au Maroc."
+        keywords="histoire moussa marbre, usine pierre taza, carrière marbre maroc, entreprise marbre taza"
+        url="https://moussamarbre.com/#/a-propos"
+      />
       <HeroSection />
       <FounderSection />
       <BeliefsSection />

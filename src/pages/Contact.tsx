@@ -12,6 +12,8 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { useTranslation } from 'react-i18next';
+import SEO from '../components/SEO';
+
 const services = [
   'Marbre',
   'Granit',
@@ -83,6 +85,12 @@ const ContactPage = () => {
 
   return (
     <div dir={i18n.language === 'ar' ? 'rtl' : 'ltr'}>
+      <SEO
+        title={`${t('contactPage.title1')} ${t('contactPage.title2')} | Moussa Marbre`}
+        description="Contactez Moussa Marbre au +212 661-829455 ou visitez notre showroom à Taza. Devis gratuit sous 24h pour vos projets de marbre et pierre naturelle au Maroc."
+        keywords="contact moussa marbre, numero marbre taza, adresse usine marbre, devis marbre maroc"
+        url="https://moussamarbre.com/#/contact"
+      />
       {/* Header Section */}
       <section className="pt-[12rem]  pb-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

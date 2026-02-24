@@ -55,6 +55,9 @@ const Hero = () => {
             src={slides[currentSlide].image}
             alt="Luxury marble presentation"
             className="w-full h-full object-cover"
+            loading={currentSlide === 0 ? "eager" : "lazy"}
+            fetchPriority={currentSlide === 0 ? "high" : "auto"}
+            decoding="async"
           />
           <div className="absolute inset-0 bg-foreground/80" />
         </motion.div>
