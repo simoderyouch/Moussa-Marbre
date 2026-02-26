@@ -71,7 +71,7 @@ const About = () => {
               <img
                 src="./about-hero-section.jpeg"
                 alt="Maître artisan travaillant le marbre brut"
-                className="w-full h-full object-cover transition-transform duration-1000 hover:scale-105"
+                className="w-full h-full object-cover transition-transform duration-1000 "
                 loading="lazy"
               />
             </div>
@@ -82,7 +82,7 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-              className={`absolute -bottom-6 sm:bottom-12 bg-foreground p-8 sm:p-12 shadow-xl z-10 max-w-[280px] ${i18n.language === 'ar' ? '-right-4 sm:-right-12' : '-left-4 sm:-left-12'}`}
+              className={`absolute -bottom-6 sm:bottom-12 bg-foreground p-4 sm:p-9 shadow-xl z-10 max-w-[280px] ${i18n.language === 'ar' ? '-right-4 sm:-right-12' : '-left-4 sm:-left-12'}`}
             >
               <div className="flex items-center gap-4 mb-2">
                 <div className={`text-6xl sm:text-7xl font-sans font-bold text-white leading-none tracking-tighter ${i18n.language === 'ar' ? 'flex-row-reverse flex' : ''}`}>

@@ -36,8 +36,9 @@ const ProductsCarousel = () => {
             .then(res => res.json())
             .then((data: Product[]) => {
                 // Filter out unpublished or missing image products, then grab the first 8 for the carousel
+                // Only include products from the 'Marbre local' category
                 const featured = data
-                    .filter(p => p.published && p.images)
+                    .filter(p => p.published && p.images && p.category?.name?.toLowerCase() === 'marbre local')
                     .slice(0, 8);
                 setProducts(featured);
                 setIsLoading(false);

@@ -11,19 +11,19 @@ const Hero = () => {
 
   const slides = [
     {
-      image: './service-4.jpg',
+      image: './slide1.JPG',
       tagline: t('hero.slide1.tagline'),
       title: t('hero.slide1.title'),
       description: t('hero.slide1.description')
     },
     {
-      image: './service-5.jpg',
+      image: './slide2.JPG',
       tagline: t('hero.slide2.tagline'),
       title: t('hero.slide2.title'),
       description: t('hero.slide2.description')
     },
     {
-      image: './service-8.jpg',
+      image: './slide3.JPG',
       tagline: t('hero.slide3.tagline'),
       title: t('hero.slide3.title'),
       description: t('hero.slide3.description')

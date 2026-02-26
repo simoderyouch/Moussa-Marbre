@@ -19,8 +19,8 @@ app.use(express.json());
 
 // Serve static images with aggressive caching (1 year, immutable)
 const imagesCacheOptions = { maxAge: '365d', immutable: true, etag: true, lastModified: true };
-app.use('/api/images', express.static(path.join(__dirname, 'data'), imagesCacheOptions));
-app.use('/api/projects-images', express.static(path.join(__dirname, 'projects'), imagesCacheOptions));
+app.use('/api/images', express.static(path.join(__dirname, 'public', 'images'), imagesCacheOptions));
+app.use('/api/projects-images', express.static(path.join(__dirname, 'public', 'projects'), imagesCacheOptions));
 
 // Get all products
 app.get('/api/products', async (req: express.Request, res: express.Response) => {

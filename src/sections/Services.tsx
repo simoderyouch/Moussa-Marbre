@@ -59,16 +59,16 @@ const Services = () => {
       <div className="max-w-7xl  mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-16 lg:gap-24 items-start pb-24">
 
         {/* Right Column: Imagery */}
-        <div className={`lg:col-span-6  relative lg:mt-[80px] ${i18n.language === 'ar' ? 'order-1 lg:order-2' : ''}`}>
+        <div className={`lg:col-span-6  relative lg:mt-[0px] ${i18n.language === 'ar' ? 'order-1 lg:order-2' : ''}`}>
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className={`relative rounded-none overflow-hidden aspect-[4/3] bg-muted ${i18n.language === 'ar' ? 'mr-auto' : ''}`}
+            className={`relative rounded-none overflow-hidden aspect-[5/5] bg-muted ${i18n.language === 'ar' ? 'mr-auto' : ''}`}
           >
             <img
-              src="./h4-our.jpg"
+              src="./service.JPG"
               alt="Factory processing massive marble blocks"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105"
               loading="lazy"
@@ -82,7 +82,7 @@ const Services = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className={`absolute  -bottom-[36%]  md:-bottom-[20%] lg:-bottom-[39%] ${i18n.language === 'ar' ? '-left-4 sm:-left-12' : '-right-4 sm:-right-12'} p-2`}
+            className={`absolute  -bottom-[32%]  md:-bottom-[20%] md:display-none lg:-bottom-[39%] ${i18n.language === 'ar' ? '-left-4 sm:-left-12' : '-right-4 sm:-right-12'} p-2`}
           >
             <div className="">
               <img

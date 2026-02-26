@@ -15,6 +15,7 @@ export interface Product {
   category: {
     id: number;
     name: string;
+    order?: number;
   } | null;
   type: string | null;
   published: boolean;
@@ -47,17 +48,25 @@ const ProductsPage = () => {
 
   // Compute unique categories dynamically from the loaded products.
   const uniqueCategories = useMemo(() => {
-    const categoriesSet = new Set<string>();
+    const categoryMap = new Map<string, number>();
     products.forEach((p) => {
       if (p.category?.name) {
-        categoriesSet.add(p.category.name.trim());
+        // Record the smallest order we find for this category name just in case
+        const currentOrder = categoryMap.get(p.category.name.trim()) ?? 999;
+        const newOrder = p.category.order ?? 99;
+        categoryMap.set(p.category.name.trim(), Math.min(currentOrder, newOrder));
       }
     });
-    // Convert to an array of usable objects mimicking the old format
-    const catsArray = Array.from(categoriesSet).map((catName) => ({
-      id: catName.toLowerCase().replace(/[\s&]+/g, '-'), // "Pierre Naturelle & Tahejart" -> "pierre-naturelle-tahejart"
-      name: catName.toUpperCase()
-    }));
+
+    // Convert to an array of usable objects mimicking the old format, sorted by the matched order
+    const catsArray = Array.from(categoryMap.entries())
+      .map(([catName, order]) => ({
+        id: catName.toLowerCase().replace(/[\s&]+/g, '-'), // "Pierre Naturelle & Tahejart" -> "pierre-naturelle-tahejart"
+        name: catName.toUpperCase(),
+        order
+      }))
+      .sort((a, b) => a.order - b.order);
+
     return catsArray;
   }, [products]);
 
@@ -86,8 +95,8 @@ const ProductsPage = () => {
     return (
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-x-4 gap-y-8">
         {gridProducts.map((product) => (
-          <Link key={product.id} to={`/produits/${generateSlug(product.name)}`} className="group cursor-pointer flex flex-col">
-            <div className="relative overflow-hidden rounded-none aspect-[4/5] mb-4 bg-secondary flex items-center justify-center">
+          <Link key={product.id} to={`/produits/${generateSlug(product.name)}`} className="group cursor-pointer  rounded-xl flex flex-col">
+            <div className="relative overflow-hidden  aspect-[3/3] rounded-xl mb-4 bg-secondary flex items-center justify-center">
               <img
                 src={product.images || 'https://images.unsplash.com/photo-1600585154363-67eb9e2e2099?w=300&q=80'}
                 alt={product.name}

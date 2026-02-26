@@ -275,7 +275,7 @@ const ContactPage = () => {
                   <MapPin className="w-10 h-10 text-muted-foreground mx-auto mb-4" />
                   <p className="text-foreground font-medium">{t('contactPage.loc1')}, {t('contactPage.loc2')}</p>
                   <a
-                    href="https://maps.google.com"
+                    href="https://maps.app.goo.gl/cA7HBzvCjftm6rq68"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-primary text-sm hover:underline mt-4 inline-block font-medium"
