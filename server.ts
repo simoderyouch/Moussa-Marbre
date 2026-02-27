@@ -148,7 +148,7 @@ Do NOT append "[SHOW_CTA]" for simple greetings, thanks, or general pleasantries
 If a user asks a question not covered by the data, politely inform them they can contact the team directly via the contact page or WhatsApp. Do not make up prices or products.`;
 
         const openRouterPayload = {
-            model: "google/gemini-2.5-flash", // Fast and reliable OpenRouter default model
+            model: "mistralai/mistral-7b-instruct", // Fast and reliable OpenRouter default model
             max_tokens: 1000, // Explicitly limit tokens to avoid 402 HTTP credit reservation errors
             messages: [
                 { role: "system", content: systemPrompt },

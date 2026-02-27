@@ -1,7 +1,11 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { PrismaClient } from '@prisma/client';
+import path from 'path';
 
-const prisma = new PrismaClient();
+const dbPath = path.join(process.cwd(), 'prisma', 'dev.db');
+const prisma = new PrismaClient({
+    datasources: { db: { url: `file:${dbPath}` } }
+});
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
     res.setHeader('Access-Control-Allow-Origin', '*');
