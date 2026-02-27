@@ -97,16 +97,15 @@ app.post('/api/chat', async (req: express.Request, res: express.Response) => {
             return res.status(500).json({ error: 'OPENROUTER_API_KEY is not configured on the server.' });
         }
 
-        // Fetch small amount of context from the database
+        // Fetch all active products
         const activeProducts = await prisma.product.findMany({
             where: { published: true },
-            take: 20,
-            select: { name: true, regularPrice: true, category: { select: { name: true } } }
+            select: { name: true, regularPrice: true, type: true, inStock: true, category: { select: { name: true } } }
         });
 
+        // Fetch all active projects
         const activeProjects = await prisma.project.findMany({
             where: { published: true },
-            take: 10,
             select: { title: true, description: true, category: { select: { name: true } } }
         });
 
@@ -119,12 +118,14 @@ Company Background (Moussa Marbre):
 - Achievements: 30+ types of stones, 80+ delivered projects, 50+ trained artisans.
 - Mission: Transform spaces into timeless works of art using natural stone.
 - Vision: To become the recognized leader in Morocco for the transformation of marble and granite, combining technological innovation, artisanal know-how, and environmental respect.
+- Address: Taza, Morocco.
+- Phone/WhatsApp: +212 661-829455
 - Core Services: Wall and floor coverings (Revêtement Mural Et De Sol), kitchen worktops (Plans De Travail De Cuisine), staircase and terrace cladding (Habillage Escaliers Et Terrasses), and outdoor landscaping (Aménagement Des Espaces Extérieurs).
 
-Products Available:
-${activeProducts.map(p => `- ${p.name} (Category: ${p.category?.name || 'Uncategorized'}, Price: ${p.regularPrice ? p.regularPrice + ' MAD' : 'Contact for price'})`).join('\n')}
+FULL Products Database (All Available Items):
+${activeProducts.map(p => `- ${p.name} (Category: ${p.category?.name || 'Uncategorized'}, Type: ${p.type || 'N/A'}, Price: ${p.regularPrice ? p.regularPrice + ' MAD' : 'Contact for price'}, In Stock: ${p.inStock ? 'Yes' : 'No'})`).join('\n')}
 
-Recent Projects:
+FULL Recent Projects/Portfolio:
 ${activeProjects.map(p => `- ${p.title} (${p.category?.name || 'Uncategorized'}): ${p.description}`).join('\n')}
 `;
 
