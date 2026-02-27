@@ -125,7 +125,7 @@ const ProductDetails = () => {
                     {/* Product Image */}
                     <div className="bg-secondary p-8 md:p-16 flex items-center justify-center border border-border/50">
                         <img
-                            src={product.images || 'https://images.unsplash.com/photo-1600585154363-67eb9e2e2099?w=300&q=80'}
+                            src={product.images ? product.images.replace('/api/images/', '/images/') : 'https://images.unsplash.com/photo-1600585154363-67eb9e2e2099?w=300&q=80'}
                             alt={product.name}
                             decoding="async"
                             className="w-full h-auto object-cover max-h-[60vh] shadow-xl"

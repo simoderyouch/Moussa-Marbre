@@ -121,7 +121,7 @@ const ProductsCarousel = () => {
                                         {/* Image Container */}
                                         <div className="relative aspect-[4/5] overflow-hidden mb-6 bg-background flex items-center justify-center">
                                             <img
-                                                src={product.images || 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&q=80'}
+                                                src={product.images ? product.images.replace('/api/images/', '/images/') : 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&q=80'}
                                                 alt={product.name}
                                                 loading="lazy"
                                                 decoding="async"

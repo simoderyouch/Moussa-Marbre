@@ -98,7 +98,7 @@ const ProductsPage = () => {
           <Link key={product.id} to={`/produits/${generateSlug(product.name)}`} className="group cursor-pointer  rounded-xl flex flex-col">
             <div className="relative overflow-hidden  aspect-[3/3] rounded-xl mb-4 bg-secondary flex items-center justify-center">
               <img
-                src={product.images || 'https://images.unsplash.com/photo-1600585154363-67eb9e2e2099?w=300&q=80'}
+                src={product.images ? product.images.replace('/api/images/', '/images/') : 'https://images.unsplash.com/photo-1600585154363-67eb9e2e2099?w=300&q=80'}
                 alt={product.name}
                 loading="lazy"
                 decoding="async"
