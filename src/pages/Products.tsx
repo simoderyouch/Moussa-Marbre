@@ -124,7 +124,7 @@ const ProductsPage = () => {
         title={`${t('productsPage.title1')} ${t('productsPage.title2')} | Moussa Marbre`}
         description="Consultez notre catalogue complet de marbre, granit et pierre naturelle. Choisissez parmi plus de 30 variétés pour tous vos projets d'aménagement intérieur et extérieur au Maroc."
         keywords="catalogue marbre, prix granit maroc, pierre naturelle construction, Moussa Marbre Taza"
-        url="https://moussamarbre.com/#/produits"
+        url="https://moussamarbre.com/produits"
       />
       {/* Header Section */}
       <section className="pt-[12rem] pb-24 bg-background">

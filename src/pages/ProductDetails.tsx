@@ -90,7 +90,7 @@ const ProductDetails = () => {
                 title={`${product.name} | Catalogue Moussa Marbre`}
                 description={`Découvrez le ${product.name} par Moussa Marbre. Idéal pour vos revêtements de sol, murs, escaliers ou façades. Qualité premium au Maroc.`}
                 keywords={`${product.name} prix, acheter ${product.name} maroc, ${product.name} taza, pierre naturelle`}
-                url={`https://moussamarbre.com/#/produits/${name}`}
+                url={`https://moussamarbre.com/produits/${name}`}
                 image={product.images || undefined}
                 structuredData={{
                     "@context": "https://schema.org/",

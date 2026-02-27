@@ -59,7 +59,7 @@ const ProjectsPage = () => {
         title={`${t('projectsPage.title1')} ${t('projectsPage.title2')} | Moussa Marbre`}
         description="Découvrez nos projets inspirants en marbre et pierre naturelle répartis dans tout le Maroc. Plus de 80 réalisations haut de gamme : plans de travail, escaliers, façades et plus."
         keywords="projets marbre maroc, réalisations pierre naturelle, installation granit, Moussa Marbre projets"
-        url="https://moussamarbre.com/#/projets"
+        url="https://moussamarbre.com/projets"
       />
       {/* Header Section */}
       <section className="pt-[12rem] pb-24 bg-background">

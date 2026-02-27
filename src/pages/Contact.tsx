@@ -89,7 +89,7 @@ const ContactPage = () => {
         title={`${t('contactPage.title1')} ${t('contactPage.title2')} | Moussa Marbre`}
         description="Contactez Moussa Marbre au +212 661-829455 ou visitez notre showroom à Taza. Devis gratuit sous 24h pour vos projets de marbre et pierre naturelle au Maroc."
         keywords="contact moussa marbre, numero marbre taza, adresse usine marbre, devis marbre maroc"
-        url="https://moussamarbre.com/#/contact"
+        url="https://moussamarbre.com/contact"
       />
       {/* Header Section */}
       <section className="pt-[12rem]  pb-24 bg-background">
