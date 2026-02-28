@@ -86,7 +86,7 @@ const Services = () => {
           >
             <div className="">
               <img
-                src="./h1-wedo03.png"
+                src="./h1-wedo04.png"
                 alt="Detailed marble texture close-up"
                 className={`w-full h-full object-cover ${i18n.language === 'ar' ? '-scale-x-100' : ''}`}
               />
